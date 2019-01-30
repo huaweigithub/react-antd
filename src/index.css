@@ -12,3 +12,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.logo{
+  padding: 20px 0;
+}
+
+.ant-layout{
+  position: relative;
+}
+
+.ant-layout .ant-layout-header{
+  text-align: left;
+}
+
+.ant-layout-header .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.ant-layout-header .trigger:hover {
+  color: #1890ff;
+}

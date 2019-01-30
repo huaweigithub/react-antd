@@ -315,12 +315,13 @@ module.exports = {
 						exclude: lessModuleRegex,
 						use: [
 							...getStyleLoaders({ importLoaders: 2 }, 'less-loader'),
-							// {
-							// 	loader: require.resolve('less-loader'),
-							// 		options: {
-							// 		  	modifyVars: { "@primary-color": "#001529" },
-							// 		},
-							// }
+							{
+								loader: require.resolve('less-loader'),
+									options: {
+											modifyVars: { "@primary-color": "#001529" },
+											javascriptEnabled: true
+									},
+							}
 						],
 					},
 					// Adds support for CSS Modules, but using LESS
