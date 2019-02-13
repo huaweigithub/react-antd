@@ -5,9 +5,7 @@ import 'antd/dist/antd.css';
 import {Layout, Menu, Icon, Button } from 'antd';
 import RouterApp from '../router/index';
 import {
-  HashRouter,
-  Route,
-  Link
+  Link,
 } from 'react-router-dom';
 
 const SubMenu = Menu.SubMenu;
@@ -35,30 +33,20 @@ class BasicLayout extends React.Component {
           collapsed={this.state.collapsed}
         >
           <div className="logo"><img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" width="30%" alt=""/></div>
-          <HashRouter>
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
-            <Menu.Item key="1">
-              <Link to="/">
-                <Icon type="user" />
-                <span className="nav-text">nav 1</span>
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="2">
-              <Link to="/apps">
-                <Icon type="video-camera" />
-                <span className="nav-text">nav 2</span>
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="3">
-              <Icon type="upload" />
-              <span className="nav-text">nav 3</span>
-            </Menu.Item>
-            <Menu.Item key="4">
-              <Icon type="user" />
-              <span className="nav-text">nav 4</span>
-            </Menu.Item>
-          </Menu>
-          </HashRouter>
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+              <Menu.Item key="1">
+                <Link to="/">
+                  <Icon type="user" />
+                  <span className="nav-text">nav 1</span>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="2">
+                <Link to="/apps">
+                  <Icon type="video-camera" />
+                  <span className="nav-text">nav 2</span>
+                </Link>
+              </Menu.Item>
+            </Menu>
         </Sider>
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }} >
@@ -70,7 +58,7 @@ class BasicLayout extends React.Component {
           </Header>
           <Content style={{ margin: '24px 16px 0' }}>
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              <h1>test...</h1>
+              <h1>这是layout主体部分...</h1>
               <RouterApp />
             </div>
           </Content>
